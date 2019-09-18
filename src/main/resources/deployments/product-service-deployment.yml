@@ -11,6 +11,6 @@ spec:
       spec:
          containers:
          - name: product-service-app
-           image: gcr.io/${PROJECT_ID}/product-service
+           image: gcr.io/practice-23900/product-service
            ports:
            - containerPort: 8080
