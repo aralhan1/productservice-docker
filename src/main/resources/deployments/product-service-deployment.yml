@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+   name: product-service-deployment
+spec:
+   replicas: 2
+   template:
+      metadata:
+         labels:
+            app: product-service
+      spec:
+         containers:
+         - name: product-service-app
+           image: gcr.io/${PROJECT_ID}/product-service
+           ports:
+           - containerPort: 8080
